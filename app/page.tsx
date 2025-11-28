@@ -1,19 +1,16 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
+import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Focus from "@/components/Focus";
-
+import Intro from "@/components/Intro";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-black">
+    <main className="bg-white text-black px-6">
       <Navbar />
-      <Hero />
-      <About />
-      <Focus />
+      <Intro />
+      <Skills />
       <Projects />
       <Contact />
       <Footer />
