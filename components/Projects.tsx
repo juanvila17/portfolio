@@ -1,34 +1,34 @@
 import Reveal from "@/components/Reveal";
 
 export default function Projects() {
-  const projects = [
+const projects = [
     {
-      title: "Portfolio Personal",
-      description:
-        "Sitio web profesional construido con Next.js y Tailwind. Diseño minimalista, centrado en claridad y experiencia del usuario.",
-      stack: "Next.js · Tailwind · React",
-      link: "#",
+        title: "Price Monitor",
+        description:
+            "Plataforma para trackear precios mediante scraping y monitoreo histórico con dashboard y API.",
+        stack: "FastAPI · Playwright · PostgreSQL · React",
+        link: "#",
     },
     {
-      title: "Price Monitor",
-      description:
-        "Plataforma para trackear precios mediante scraping y monitoreo histórico con dashboard y API.",
-      stack: "FastAPI · Playwright · PostgreSQL · React",
-      link: "#",
+        title: "Outfit AI",
+        description:
+            "Aplicación que analiza prendas mediante visión por computadora para generar outfits automáticamente.",
+        stack: "Python · AI Vision · FastAPI · React Native",
+        link: "#",
     },
     {
-      title: "Outfit AI",
-      description:
-        "Aplicación que analiza prendas mediante visión por computadora para generar outfits automáticamente.",
-      stack: "Python · AI Vision · FastAPI · React Native",
-      link: "#",
+        title: "Sistema de Tránsito",
+        description:
+            "Trabajo en Spring Boot. Utilizando SOLID, arquitectura modular y limpia, uso de patrones Strategy para políticas de evaluación y State para gestionar los estados del usuario (registro → verificación → activo → sancionado). Incluye pruebas, seguridad y buenas prácticas de diseño.",
+        stack: "Spring Boot · SOLID · Strategy · State",
+        link: "#",
     },
-  ];
+];
 
   return (
     <Reveal>
       <section className="max-w-3xl mx-auto py-24">
-        <h2 className="text-4xl font-semibold tracking-tight mb-8">Proyectos</h2>
+        <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Proyectos</h2>
 
         <div className="space-y-16">
           {projects.map((project) => (

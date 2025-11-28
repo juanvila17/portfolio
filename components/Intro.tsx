@@ -35,7 +35,7 @@ export default function Intro() {
           </a>
 
           <a
-            href="https://linkedin.com/in/juan-vila17"
+            href="https://www.linkedin.com/in/juan-vila-41b4901bb/"
             target="_blank"
             className="text-lg text-gray-800 hover:opacity-70 transition"
           >
