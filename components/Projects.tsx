@@ -10,13 +10,6 @@ const projects = [
         link: "#",
     },
     {
-        title: "Outfit AI",
-        description:
-            "Aplicación que analiza prendas mediante visión por computadora para generar outfits automáticamente.",
-        stack: "Python · AI Vision · FastAPI · React Native",
-        link: "#",
-    },
-    {
         title: "Sistema de Tránsito",
         description:
             "Trabajo en Spring Boot. Utilizando SOLID, arquitectura modular y limpia, uso de patrones Strategy para políticas de evaluación y State para gestionar los estados del usuario (registro → verificación → activo → sancionado). Incluye pruebas, seguridad y buenas prácticas de diseño.",
