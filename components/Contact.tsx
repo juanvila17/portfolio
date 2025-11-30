@@ -4,7 +4,10 @@ import Reveal from "@/components/Reveal";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
+import { useLanguage } from "./LanguageProvider";
+
 export default function Contact() {
+  const { t } = useLanguage();
   const [sent, setSent] = useState(false);
 
   const sendEmail = (e: any) => {
@@ -31,7 +34,7 @@ export default function Contact() {
     <Reveal>
       <section className="max-w-3xl mx-auto py-24">
         <h2 className="text-4xl font-semibold tracking-tight mb-6 text-center">
-          Contacto
+          {t("contact.title")}
         </h2>
 
         {!sent ? (
@@ -41,7 +44,7 @@ export default function Contact() {
           >
             {/* Nombre */}
             <div className="flex flex-col">
-              <label className="text-sm mb-1 text-gray-700">Nombre</label>
+              <label className="text-sm mb-1 text-gray-700">{t("contact.labels.name")}</label>
               <input
                 type="text"
                 name="from_name"
@@ -52,7 +55,7 @@ export default function Contact() {
 
             {/* Email */}
             <div className="flex flex-col">
-              <label className="text-sm mb-1 text-gray-700">Correo</label>
+              <label className="text-sm mb-1 text-gray-700">{t("contact.labels.email")}</label>
               <input
                 type="email"
                 name="reply_to"
@@ -63,7 +66,7 @@ export default function Contact() {
 
             {/* Mensaje */}
             <div className="flex flex-col">
-              <label className="text-sm mb-1 text-gray-700">Mensaje</label>
+              <label className="text-sm mb-1 text-gray-700">{t("contact.labels.message")}</label>
               <textarea
                 name="message"
                 rows={4}
@@ -76,7 +79,7 @@ export default function Contact() {
               type="submit"
               className="w-full bg-black text-white py-3 rounded-md font-medium hover:bg-black/80 transition"
             >
-              Enviar mensaje
+              {t("contact.send")}
             </button>
           </form>
         ) : (

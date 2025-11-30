@@ -1,27 +1,17 @@
+"use client";
+
 import Reveal from "@/components/Reveal";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Projects() {
-const projects = [
-    {
-        title: "Price Monitor",
-        description:
-            "Plataforma para trackear precios mediante scraping y monitoreo histórico con dashboard y API.",
-        stack: "FastAPI · Playwright · PostgreSQL · React",
-        link: "#",
-    },
-    {
-        title: "Sistema de Tránsito",
-        description:
-            "Trabajo en Spring Boot. Utilizando SOLID, arquitectura modular y limpia, uso de patrones Strategy para políticas de evaluación y State para gestionar los estados del usuario (registro → verificación → activo → sancionado). Incluye pruebas, seguridad y buenas prácticas de diseño.",
-        stack: "Spring Boot · SOLID · Strategy · State",
-        link: "#",
-    },
-];
+  const { t } = useLanguage();
+  const raw = t("projects.list");
+  const projects = Array.isArray(raw) ? (raw as any[]) : [];
 
   return (
     <Reveal>
       <section className="max-w-3xl mx-auto py-24">
-        <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Proyectos</h2>
+  <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">{t("projects.title")}</h2>
 
         <div className="space-y-16">
           {projects.map((project) => (

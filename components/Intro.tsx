@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Intro() {
+  const { t } = useLanguage();
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -15,13 +18,11 @@ export default function Intro() {
       {/* Texto */}
       <div className="flex-1">
         <h1 className="text-6xl font-semibold tracking-tight leading-tight">
-          Hola, soy Juan.
+          {t("intro.title")}
         </h1>
 
         <p className="mt-6 text-xl text-gray-600 leading-relaxed max-w-xl">
-          Me gusta entender cómo funcionan las cosas y convertir problemas reales
-          en software claro y funcional. Actualmente trabajo con scraping, datos
-          y automatización.
+          {t("intro.paragraph")}
         </p>
 
         {/* LINKS */}
@@ -31,7 +32,7 @@ export default function Intro() {
             target="_blank"
             className="text-lg text-gray-800 hover:opacity-70 transition"
           >
-            GitHub →
+            {t("intro.github")}
           </a>
 
           <a
@@ -39,7 +40,7 @@ export default function Intro() {
             target="_blank"
             className="text-lg text-gray-800 hover:opacity-70 transition"
           >
-            LinkedIn →
+            {t("intro.linkedin")}
           </a>
         </div>
       </div>

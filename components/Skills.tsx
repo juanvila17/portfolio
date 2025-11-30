@@ -10,11 +10,7 @@ import {
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import {
-  arrayMove,
-  SortableContext,
-  useSortable,
-} from "@dnd-kit/sortable";
+import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
 // Componente individual
@@ -47,7 +43,10 @@ function SortableSkill({ skill }: any) {
   );
 }
 
+import { useLanguage } from "./LanguageProvider";
+
 export default function Skills() {
+  const { t } = useLanguage();
   const [skills, setSkills] = useState([
     { name: "React", logo: "/logos/react.svg" },
     { name: "Next.js", logo: "/logos/nextdotjs.svg" },
@@ -70,7 +69,7 @@ export default function Skills() {
     <Reveal>
       <section className="max-w-3xl mx-auto py-24">
         <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">
-          Tecnologías
+          {t("skills.title")}
         </h2>
 
         <DndContext
