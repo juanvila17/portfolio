@@ -13,13 +13,6 @@ const translations = {
       title: 'Projects',
       list: [
         {
-          title: 'Price Monitor',
-          description:
-            'Platform to track prices using scraping and historical monitoring with a dashboard and API.',
-          stack: 'FastAPI · Playwright · PostgreSQL · React',
-          link: '#',
-        },
-        {
           title: 'Transit System',
           description:
             'Working on Spring Boot. Using SOLID, modular and clean architecture, Strategy patterns for evaluation policies and State for user states (registration → verification → active → sanctioned). Includes tests and security.',
@@ -60,13 +53,6 @@ const translations = {
     projects: {
       title: 'Proyectos',
       list: [
-        {
-          title: 'Price Monitor',
-          description:
-            'Plataforma para trackear precios mediante scraping y monitoreo histórico con dashboard y API.',
-          stack: 'FastAPI · Playwright · PostgreSQL · React',
-          link: '#',
-        },
         {
           title: 'Sistema de Tránsito',
           description:
